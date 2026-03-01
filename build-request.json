@@ -1,0 +1,159 @@
+{
+  "kind": "build_request",
+  "title": "Professional redesign for The Blush — refined, crisp visual identity",
+  "projectName": "The Blush",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Redesign the global visual theme for The Blush with a professional, high-end salon aesthetic. Replace the current color palette with a sophisticated scheme using deep charcoal/near-black, warm off-white/cream, and a single refined accent (e.g., champagne gold or dusty rose). Update CSS custom properties in frontend/src/index.css and frontend/index.css to reflect these new tokens consistently across light and dark modes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "professional new look for THE BLUSH one of the finest and crisp"
+        ]
+      },
+      "acceptanceCriteria": [
+        "CSS custom properties for background, foreground, primary, and accent colors are updated to the new sophisticated palette",
+        "No remnants of the old blush-pink/ivory palette remain as primary colors",
+        "Light and dark mode tokens are both updated"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Update the Layout.tsx navigation header to match the new design system: use the new color tokens, apply a clean minimal nav with generous spacing, refined typography (Cormorant Garamond for the logo/brand name in large elegant serif, Jost for nav links in uppercase tracked letterspacing), and a crisp sticky header with a subtle border or shadow instead of a heavy background.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "professional new look for THE BLUSH one of the finest and crisp"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation header uses the new color palette",
+        "Brand name 'The Blush' is displayed in Cormorant Garamond in an elegant large size",
+        "Nav links use Jost in uppercase with letter-spacing",
+        "Header is sticky and visually refined with no harsh color blocks"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Restyle the Home page (Home.tsx) hero section with the new visual identity: apply the new hero background image, use an elegant full-viewport hero with a centered text layout, large serif headline in Cormorant Garamond, a clean subheading in Jost, and CTA buttons styled with the new accent color. Update the features grid cards to use the new palette with clean borders and refined spacing.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "professional new look for THE BLUSH one of the finest and crisp"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero headline uses Cormorant Garamond in a large, elegant size",
+        "CTA buttons use the new accent color consistently",
+        "Feature cards reflect the new color system with clean, minimal styling",
+        "Overall Home page feels upscale and editorial"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Apply the new design system to the Services page (Services.tsx), Team page (Team.tsx), Book page (Book.tsx), and Gallery page (Gallery.tsx): update card backgrounds, typography hierarchy, badge styles, status indicators, and section headings to use the new palette and font pairings consistently across all pages.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "professional new look for THE BLUSH one of the finest and crisp"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All pages use consistent color tokens from the new palette",
+        "Section headings use Cormorant Garamond; body/labels use Jost",
+        "Service cards, team cards, and gallery cards all feel visually cohesive",
+        "Booking form fields and buttons reflect the new accent color"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Update the Admin dashboard (Admin.tsx), AppointmentTable.tsx, and CustomerPhotoManager.tsx to use the new design tokens. Stat cards, tab navigation, table headers, status badges, and action buttons should all reflect the refined professional palette — clean, minimal, and consistent with the rest of the site.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "professional new look for THE BLUSH one of the finest and crisp"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Admin stat cards use the new palette without the old blush-pink dominance",
+        "Status badges (pending, confirmed, cancelled) use refined accent colors",
+        "Table headers and rows use the new foreground/background tokens",
+        "Photo manager upload area is styled cleanly within the new system"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Update the Tailwind configuration (tailwind.config.js) to reflect the new design system: revise the custom color palette (blush, gold, ivory) to the new sophisticated token names and values that match the updated CSS custom properties. Ensure the font family definitions for serif (Cormorant Garamond) and sans (Jost) are preserved and applied as defaults.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "professional new look for THE BLUSH one of the finest and crisp"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Tailwind custom colors match the new OKLCH CSS custom property values",
+        "Cormorant Garamond is set as the default serif font family",
+        "Jost is set as the default sans-serif font family",
+        "No stale old color names conflict with the new palette"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Generate and render a new hero background image for The Blush home page as a static asset at frontend/public/assets/generated/hero-blush.dim_1920x1080.jpg. Also generate a refined full-width banner image for the Book page at frontend/public/assets/generated/book-banner.dim_1920x600.jpg. Use these images in the respective page components.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "professional new look for THE BLUSH one of the finest and crisp"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero background image is rendered on the Home page from /assets/generated/hero-blush.dim_1920x1080.jpg",
+        "Book page banner uses /assets/generated/book-banner.dim_1920x600.jpg",
+        "Images load correctly as static assets without backend routing"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/hooks/ (useActor.ts, useInternetIdentity.ts) or frontend/src/main.tsx",
+    "Do not modify any files under frontend/src/components/ui/",
+    "Do not change the backend schema or Motoko logic",
+    "Preserve existing Google Fonts imports (Cormorant Garamond and Jost) — enhance usage, do not replace fonts"
+  ],
+  "nonGoals": [
+    "Adding new pages or routes",
+    "Changes to booking or appointment logic",
+    "Changes to the photo upload or gallery data model",
+    "Adding new backend endpoints",
+    "Changing authentication flow"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Luxury salon interior with soft warm lighting, marble surfaces, gold accents, and elegant styling chairs — moody editorial atmosphere, deep charcoal and cream tones (hero-blush.dim_1920x1080.jpg)",
+      "Close-up of a sophisticated hair styling scene with champagne gold and ivory tones, soft bokeh background, editorial and upscale feel (book-banner.dim_1920x600.jpg)"
+    ],
+    "edits": []
+  }
+}

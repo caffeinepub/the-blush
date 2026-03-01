@@ -1,0 +1,164 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Professional redesign for The Blush — refined, crisp visual identity",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Redesign the global visual theme with a professional, high-end salon aesthetic using deep charcoal, warm cream, and champagne gold/dusty rose accents",
+      "acceptanceCriteria": [
+        "CSS custom properties for background, foreground, primary, and accent colors are updated to the new sophisticated palette",
+        "No remnants of the old blush-pink/ivory palette remain as primary colors",
+        "Light and dark mode tokens are both updated"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Replace the existing OKLCH CSS custom properties with the new sophisticated color palette: deep charcoal (#1a1a1a) for backgrounds, warm off-white/cream (#f8f6f3) for foreground text, champagne gold (#d4af37) or dusty rose (#c89b8e) as the refined accent color. Update all color tokens for background, foreground, card, popover, primary, secondary, muted, accent, destructive, border, input, and ring in both light and dark modes to reflect the high-end salon aesthetic. Preserve the Google Fonts imports for Cormorant Garamond and Jost."
+        },
+        {
+          "path": "frontend/index.css",
+          "operation": "modify",
+          "description": "Update the CSS custom properties in this file to match the new sophisticated palette defined in frontend/src/index.css, ensuring consistent color tokens across the application for both light and dark modes."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Update the Layout.tsx navigation header to match the new design system with elegant typography and refined sticky header styling",
+      "acceptanceCriteria": [
+        "Navigation header uses the new color palette",
+        "Brand name 'The Blush' is displayed in Cormorant Garamond in an elegant large size",
+        "Nav links use Jost in uppercase with letter-spacing",
+        "Header is sticky and visually refined with no harsh color blocks"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Redesign the navigation header to use the new color tokens from the updated CSS custom properties. Apply Cormorant Garamond (font-serif) to the brand name 'The Blush' in a large elegant size (text-3xl or text-4xl). Style nav links with Jost (font-sans) in uppercase (uppercase) with tracked letter-spacing (tracking-wider). Replace any heavy background colors with a subtle border (border-b) or soft shadow. Ensure the header remains sticky (sticky top-0) with generous spacing and a clean minimal aesthetic. Update both desktop and mobile menu styles to reflect the new refined palette."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Restyle the Home page hero section with the new visual identity, elegant typography, and updated hero background image",
+      "acceptanceCriteria": [
+        "Hero headline uses Cormorant Garamond in a large, elegant size",
+        "CTA buttons use the new accent color consistently",
+        "Feature cards reflect the new color system with clean, minimal styling",
+        "Overall Home page feels upscale and editorial"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Redesign the hero section to use the new generated hero background image at frontend/public/assets/generated/hero-blush.dim_1920x1080.jpg as the background. Apply an elegant full-viewport hero layout with centered text. Style the headline with Cormorant Garamond (font-serif) in a large elegant size (text-5xl or text-6xl). Use Jost (font-sans) for the subheading. Update CTA buttons to use the new accent color tokens. Restyle the features grid cards with the new palette, applying clean borders, refined spacing, and minimal card styling. Ensure the overall page feels upscale and editorial with the new color system."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply the new design system to Services, Team, Book, and Gallery pages with consistent typography and color palette",
+      "acceptanceCriteria": [
+        "All pages use consistent color tokens from the new palette",
+        "Section headings use Cormorant Garamond; body/labels use Jost",
+        "Service cards, team cards, and gallery cards all feel visually cohesive",
+        "Booking form fields and buttons reflect the new accent color"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Services.tsx",
+          "operation": "modify",
+          "description": "Update all service cards to use the new color tokens for backgrounds, borders, and text. Apply Cormorant Garamond (font-serif) to section headings and card titles. Use Jost (font-sans) for body text, labels, and descriptions. Update price and duration badges with the new accent color. Ensure clean, minimal card styling with refined spacing that matches the new upscale aesthetic."
+        },
+        {
+          "path": "frontend/src/pages/Team.tsx",
+          "operation": "modify",
+          "description": "Restyle team member cards using the new color palette for card backgrounds, borders, and text. Apply Cormorant Garamond (font-serif) to section headings and staff names. Use Jost (font-sans) for roles, bios, and labels. Update avatar backgrounds and skill badges with the new accent color. Ensure consistent visual cohesion with the rest of the site."
+        },
+        {
+          "path": "frontend/src/pages/Book.tsx",
+          "operation": "modify",
+          "description": "Update the Book page to use the new generated banner image at frontend/public/assets/generated/book-banner.dim_1920x600.jpg as the hero banner background. Apply Cormorant Garamond (font-serif) to the page heading. Ensure the sidebar and content sections use the new color tokens. The BookingForm component will be updated separately to reflect the new design system."
+        },
+        {
+          "path": "frontend/src/components/BookingForm.tsx",
+          "operation": "modify",
+          "description": "Restyle the booking form to use the new color palette for form fields, labels, buttons, and the confirmation screen. Apply Jost (font-sans) to labels and input text. Style the submit button and any CTA buttons with the new accent color. Update select dropdowns and date/time inputs to match the refined aesthetic. Ensure form validation messages and loading states use the new color tokens."
+        },
+        {
+          "path": "frontend/src/pages/Gallery.tsx",
+          "operation": "modify",
+          "description": "Update the gallery grid to use the new color tokens for card backgrounds, borders, and text. Apply Cormorant Garamond (font-serif) to customer names. Use Jost (font-sans) for review text. Ensure loading skeletons and empty state messaging reflect the new palette. Maintain clean, minimal card styling with refined spacing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Update the Admin dashboard and related components to use the new design tokens with refined professional styling",
+      "acceptanceCriteria": [
+        "Admin stat cards use the new palette without the old blush-pink dominance",
+        "Status badges (pending, confirmed, cancelled) use refined accent colors",
+        "Table headers and rows use the new foreground/background tokens",
+        "Photo manager upload area is styled cleanly within the new system"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Admin.tsx",
+          "operation": "modify",
+          "description": "Redesign the admin dashboard to use the new color palette for stat cards, tab navigation, and section backgrounds. Apply Cormorant Garamond (font-serif) to stat card headings and large numbers. Use Jost (font-sans) for labels and body text. Update status badges (pending, confirmed, cancelled) with refined accent colors that fit the new palette. Ensure the overall admin interface feels clean, minimal, and consistent with the rest of the site."
+        },
+        {
+          "path": "frontend/src/components/AppointmentTable.tsx",
+          "operation": "modify",
+          "description": "Update the appointment table to use the new color tokens for table headers, rows, borders, and status badges. Apply Jost (font-sans) to table text. Style action buttons (confirm/cancel) with the new accent colors. Ensure loading spinners and hover states match the refined aesthetic. Use clean borders and refined spacing for a professional table layout."
+        },
+        {
+          "path": "frontend/src/components/CustomerPhotoManager.tsx",
+          "operation": "modify",
+          "description": "Restyle the photo manager to use the new color palette for the upload area, form fields, buttons, and photo grid. Apply Jost (font-sans) to labels and input text. Style the upload button and delete actions with the new accent color. Update upload progress indicators and validation messages to match the new design system. Ensure the component feels clean and minimal within the admin interface."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Update the Tailwind configuration to reflect the new design system with sophisticated color tokens and preserved font families",
+      "acceptanceCriteria": [
+        "Tailwind custom colors match the new OKLCH CSS custom property values",
+        "Cormorant Garamond is set as the default serif font family",
+        "Jost is set as the default sans-serif font family",
+        "No stale old color names conflict with the new palette"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Revise the custom color palette in the extend.colors section to match the new sophisticated color tokens defined in the updated CSS custom properties. Replace the old blush, gold, and ivory color values with the new deep charcoal, warm cream, and champagne gold/dusty rose values using OKLCH format. Ensure Cormorant Garamond remains defined as the default serif font family and Jost as the default sans-serif font family. Remove or rename any stale color names that conflict with the new palette to maintain consistency across the application."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Generate and render new hero and banner images for the Home and Book pages as static assets",
+      "acceptanceCriteria": [
+        "Hero background image is rendered on the Home page from /assets/generated/hero-blush.dim_1920x1080.jpg",
+        "Book page banner uses /assets/generated/book-banner.dim_1920x600.jpg",
+        "Images load correctly as static assets without backend routing"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Wire the new generated hero background image frontend/public/assets/generated/hero-blush.dim_1920x1080.jpg into the hero section background. Reference the image using the relative path /assets/generated/hero-blush.dim_1920x1080.jpg in the background-image style or as an img src, ensuring it loads as a static asset from the public directory."
+        },
+        {
+          "path": "frontend/src/pages/Book.tsx",
+          "operation": "modify",
+          "description": "Wire the new generated banner image frontend/public/assets/generated/book-banner.dim_1920x600.jpg into the Book page hero banner background. Reference the image using the relative path /assets/generated/book-banner.dim_1920x600.jpg in the background-image style or as an img src, ensuring it loads as a static asset from the public directory."
+        }
+      ]
+    }
+  ]
+}
