@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, viewport-fit=cover' />
+    <title>The Blush</title>
+
+    <!-- PWA Manifest -->
+    <link rel='manifest' href='/manifest.json' />
+
+    <!-- Theme & App Meta -->
+    <meta name='theme-color' content='#c9a97a' />
+    <meta name='application-name' content='The Blush' />
+    <meta name='description' content='Book appointments and explore services at The Blush — your premier unisex salon in Kharghar.' />
+
+    <!-- Apple / iOS PWA -->
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+    <meta name='apple-mobile-web-app-title' content='The Blush' />
+    <link rel='apple-touch-icon' href='/assets/generated/the-blush-icon-transparent.dim_512x512.png' />
+
+    <!-- Splash / tile for Windows -->
+    <meta name='msapplication-TileColor' content='#1a1a1a' />
+    <meta name='msapplication-TileImage' content='/assets/generated/the-blush-icon-transparent.dim_512x512.png' />
+
+    <!-- Favicon -->
+    <link rel='icon' type='image/png' href='/assets/generated/the-blush-icon-transparent.dim_512x512.png' />
+  </head>
+  <body>
+    <div id='root'></div>
+    <script type='module' src='/src/main.tsx'></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(() => console.log('SW registered'))
+            .catch(() => console.log('SW registration failed'));
+        });
+      }
+    </script>
+  </body>
+</html>

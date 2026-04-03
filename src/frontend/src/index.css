@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Deep charcoal + warm cream + champagne gold palette */
+    --background: oklch(97% 0.008 60);
+    --foreground: oklch(18% 0.01 50);
+
+    --card: oklch(99% 0.005 60);
+    --card-foreground: oklch(18% 0.01 50);
+
+    --popover: oklch(99% 0.005 60);
+    --popover-foreground: oklch(18% 0.01 50);
+
+    /* Champagne gold as primary */
+    --primary: oklch(62% 0.09 75);
+    --primary-foreground: oklch(99% 0.005 60);
+
+    /* Warm taupe secondary */
+    --secondary: oklch(92% 0.012 55);
+    --secondary-foreground: oklch(25% 0.01 50);
+
+    --muted: oklch(93% 0.01 55);
+    --muted-foreground: oklch(52% 0.015 50);
+
+    /* Dusty rose accent */
+    --accent: oklch(72% 0.07 20);
+    --accent-foreground: oklch(99% 0.005 60);
+
+    --destructive: oklch(55% 0.2 25);
+    --destructive-foreground: oklch(99% 0.005 60);
+
+    --border: oklch(87% 0.015 55);
+    --input: oklch(87% 0.015 55);
+    --ring: oklch(62% 0.09 75);
+
+    --radius: 0.25rem;
+
+    /* Custom tokens */
+    --gold: oklch(62% 0.09 75);
+    --gold-light: oklch(78% 0.07 75);
+    --gold-dark: oklch(48% 0.08 70);
+    --charcoal: oklch(18% 0.01 50);
+    --charcoal-mid: oklch(30% 0.01 50);
+    --cream: oklch(97% 0.008 60);
+    --cream-dark: oklch(92% 0.012 55);
+    --rose: oklch(72% 0.07 20);
+    --rose-light: oklch(88% 0.04 20);
+  }
+
+  .dark {
+    --background: oklch(14% 0.01 50);
+    --foreground: oklch(93% 0.008 60);
+
+    --card: oklch(18% 0.01 50);
+    --card-foreground: oklch(93% 0.008 60);
+
+    --popover: oklch(18% 0.01 50);
+    --popover-foreground: oklch(93% 0.008 60);
+
+    --primary: oklch(68% 0.09 75);
+    --primary-foreground: oklch(14% 0.01 50);
+
+    --secondary: oklch(24% 0.01 50);
+    --secondary-foreground: oklch(88% 0.008 60);
+
+    --muted: oklch(22% 0.01 50);
+    --muted-foreground: oklch(62% 0.015 50);
+
+    --accent: oklch(68% 0.07 20);
+    --accent-foreground: oklch(14% 0.01 50);
+
+    --destructive: oklch(55% 0.2 25);
+    --destructive-foreground: oklch(99% 0.005 60);
+
+    --border: oklch(28% 0.01 50);
+    --input: oklch(28% 0.01 50);
+    --ring: oklch(68% 0.09 75);
+
+    --gold: oklch(68% 0.09 75);
+    --gold-light: oklch(78% 0.07 75);
+    --gold-dark: oklch(52% 0.08 70);
+    --charcoal: oklch(93% 0.008 60);
+    --charcoal-mid: oklch(72% 0.01 50);
+    --cream: oklch(14% 0.01 50);
+    --cream-dark: oklch(22% 0.01 50);
+    --rose: oklch(68% 0.07 20);
+    --rose-light: oklch(30% 0.04 20);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .font-sans {
+    font-family: "Jost", sans-serif;
+  }
+
+  .text-gold {
+    color: var(--gold);
+  }
+
+  .bg-gold {
+    background-color: var(--gold);
+  }
+
+  .border-gold {
+    border-color: var(--gold);
+  }
+
+  .text-rose {
+    color: var(--rose);
+  }
+
+  .bg-rose {
+    background-color: var(--rose);
+  }
+
+  .text-charcoal {
+    color: var(--charcoal);
+  }
+
+  .bg-charcoal {
+    background-color: var(--charcoal);
+  }
+
+  .bg-cream {
+    background-color: var(--cream);
+  }
+
+  .gold-divider {
+    width: 3rem;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .section-heading {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+
+  .label-caps {
+    font-family: "Jost", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+}
